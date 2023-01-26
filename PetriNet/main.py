@@ -24,11 +24,13 @@ def import_csv(file_path):
 
 if __name__ == "__main__":
     cwd = os.getcwd()  # Get the current working directory (cwd)
-    log = import_csv('Formal-method-project\PetriNet\dataset.CSV')
+    print(cwd)
+    files=os.listdir(cwd)
+    log = import_csv('dataset.CSV')
     net, im, fm = pm4py.discover_petri_net_alpha(log)
     list_nets = decompose(net, im, fm)
     
 for index, model in enumerate(list_nets):
         subnet, s_im, s_fm = model
 
-        pm4py.save_vis_petri_net(subnet, s_im, s_fm, 'Formal-method-project\PetriNet' + str(index)+".png")
+        pm4py.save_vis_petri_net(subnet, s_im, s_fm, str(index)+".png")
