@@ -11,6 +11,7 @@
 import pandas
 import pm4py
 import os
+from pm4py.objects.petri_net.utils.decomposition import decompose
 
 
 def import_csv(file_path):
@@ -19,9 +20,15 @@ def import_csv(file_path):
     start_activities = pm4py.get_start_activities(event_log)
     end_activities = pm4py.get_end_activities(event_log)
     print("Start activities: {}\nEnd activities: {}".format(start_activities, end_activities))
+    return event_log
 
 if __name__ == "__main__":
     cwd = os.getcwd()  # Get the current working directory (cwd)
-    files = os.listdir(cwd)  # Get all the files in that directory
-    print("Files in %r: %s" % (cwd, files))
-    import_csv('Formal-method-project\PetriNet\dataset.CSV')
+    log = import_csv('Formal-method-project\PetriNet\dataset.CSV')
+    net, im, fm = pm4py.discover_petri_net_alpha(log)
+    list_nets = decompose(net, im, fm)
+    
+for index, model in enumerate(list_nets):
+        subnet, s_im, s_fm = model
+
+        pm4py.save_vis_petri_net(subnet, s_im, s_fm, 'Formal-method-project\PetriNet' + str(index)+".png")
