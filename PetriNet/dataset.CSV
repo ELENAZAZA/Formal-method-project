@@ -1,4 +1,4 @@
-sep=;
+sep=,
 caseID;activity;day;timestamp; on_off
 1;Bell;Lunedi;16/01/2023 00:00;on
 1;HallDoor;Lunedi;16/01/2023 00:00;off
