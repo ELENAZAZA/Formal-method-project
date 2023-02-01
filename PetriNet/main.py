@@ -16,6 +16,7 @@ from pm4py.objects.conversion.log import converter as log_converter
 from pm4py.algo.discovery.alpha import algorithm as alpha_miner
 from pm4py.algo.discovery.heuristics import algorithm as heuristics_miner
 #from pm4py.visualization.petrinet import visualizer as pn_visualizer
+from pm4py.visualization.petri_net import visualizer as pt_visualiser
 
 
 
@@ -23,7 +24,7 @@ from pm4py.algo.discovery.heuristics import algorithm as heuristics_miner
 
 
 def import_csv(file_path):
-    event_log = pandas.read_csv(file_path, sep=';', header=1)
+    event_log = pandas.read_csv(file_path, sep=';', header=0)
     event_log = pm4py.format_dataframe(event_log, case_id='caseID', activity_key='activity', timestamp_key='timestamp')
     event_log.rename(columns={'case ID': 'case:concept:name', 'activity': 'concept:name', 'timestamp': 'time:timestamp',
                               'on_off': 'org:resource'}, inplace=True)
@@ -45,14 +46,19 @@ if __name__ == "__main__":
     cwd = os.getcwd()  # Get the current working directory (cwd)
     print(cwd)
     files=os.listdir(cwd)
-    log = import_csv('dataset_prova.csv')
+    log = import_csv('dataset.CSV')
 
     # heuristics miner
-    net, im, fm = heuristics_miner.apply(log)
-
-    # viz
-    #gviz = pn_visualizer.apply(net, im, fm)
-    #pn_visualizer.view(gviz)
+    net, im, fm =pm4py.discover_petri_net_inductive(log)
 
 
     pm4py.save_vis_petri_net(net, im, fm, 'petri_net.png')
+
+    tree = pm4py.discover_process_tree_inductive(log)
+
+    pm4py.view_process_tree(tree)
+
+    graph_visualisation = pt_visualiser.apply(net, im, fm,
+                                              variant=pt_visualiser.Variants.FREQUENCY, log=log)
+    pt_visualiser.view(graph_visualisation)
+    pt_visualiser.save(graph_visualisation, 'PetriNet.png')

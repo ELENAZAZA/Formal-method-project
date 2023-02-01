@@ -3,7 +3,28 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\PetriNet\dataset - PRIMO.CSV">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PetriNet\dataset-GIT.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\PetriNet\dataset.CSV">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PetriNet\dataset_prova.csv">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -14,13 +35,6 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\dataset_prova.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
