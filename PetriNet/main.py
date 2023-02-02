@@ -26,8 +26,8 @@ from pm4py.visualization.petri_net import visualizer as pt_visualiser
 def import_csv(file_path):
     event_log = pandas.read_csv(file_path, sep=';', header=0)
     event_log = pm4py.format_dataframe(event_log, case_id='caseID', activity_key='activity', timestamp_key='timestamp')
-    event_log.rename(columns={'case ID': 'case:concept:name', 'activity': 'concept:name', 'timestamp': 'time:timestamp',
-                              'on_off': 'org:resource'}, inplace=True)
+    #event_log.rename(columns={'case ID': 'case:concept:name', 'activity': 'concept:name' ,'timestamp': 'time:timestamp'
+       #                       }, inplace=True)
     # Convert to log format
     log = log_converter.apply(event_log)
     #start_activities = pm4py.get_start_activities(event_log)
@@ -48,15 +48,11 @@ if __name__ == "__main__":
     files=os.listdir(cwd)
     log = import_csv('dataset.CSV')
 
-    # heuristics miner
+
+
     net, im, fm =pm4py.discover_petri_net_inductive(log)
-
-
     pm4py.save_vis_petri_net(net, im, fm, 'petri_net.png')
 
-    tree = pm4py.discover_process_tree_inductive(log)
-
-    pm4py.view_process_tree(tree)
 
     graph_visualisation = pt_visualiser.apply(net, im, fm,
                                               variant=pt_visualiser.Variants.FREQUENCY, log=log)
