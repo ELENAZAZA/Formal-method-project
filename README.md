@@ -1,18 +1,20 @@
-#Formal-method-project
+# Tracking Habit System
+
+
 Introduction
 
-**1.1. Objective**
+**1.1. Aim of the Project**
 
 The Tracking Habit System project aims to create a system capable of tracking a user's habits at home using a Petri net. The system should be able to identify any anomalies in the user's behavior and report them to the user or a monitoring system.
 
-**1.2. Technology used
+**1.2. Technology used**
 
 The project uses the following technologies:
 Python: to implement the system and the anomaly identification algorithm.
 pm4py: to perform the modeling and analysis of the Petri net.
 GitHub: to version and share the source code.
 
-**PetriNet
+**PetriNet**
 
 **2.1. Pm4py**
 Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
@@ -25,6 +27,8 @@ In this project, Inductive Miner is used as the process discovery algorithm to g
 
 The Inductive Miner algorithm is able to generate a simple, easy-to-understand process model that accurately reflects the user's behavior, making it ideal for our project. The resulting Petri net model can be used to analyze the user's habits, detect anomalies in their behavior, and provide personalized feedback and recommendations.
 
-**3. Conclusions
-3.1. Conformance checking
-3.2. Results achieved. 
+**3. Conclusions**
+
+**3.1. Conformance checking**
+
+**3.2. Results achieved.**
