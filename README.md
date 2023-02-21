@@ -24,6 +24,8 @@ GitHub: to version and share the source code.
 
 Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
 !! Allungare con varie funzioni usate 
+
+
 **2.2. Dataset**
 
 The dataset contains information about a user's habits.
