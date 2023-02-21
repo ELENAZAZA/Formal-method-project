@@ -25,7 +25,9 @@ Pm4py is an open-source Python library that provides a wide range of tools for p
 The dataset contains information about a user's habits.
 Each event log represents a sequence of actions performed by the user at home, such as turning on lights, opening doors, or using appliances. The event logs can be used to extract useful insights about the user's behavior, such as their daily routines or patterns of activity.
 
-A routine is described by 12 activities for each day of the week.
+A routine is described by 12 activities for each day of the week
+
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/petrinet.png)
 
 **2.3. Inductive miner**
 In this project, Inductive Miner is used as the process discovery algorithm to generate a Petri net model from the event log data. One of the main advantages of using Inductive Miner is its ability to handle noisy and incomplete event logs.
