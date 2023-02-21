@@ -1,31 +1,39 @@
-# Tracking Habit System
+# Smart Home Tracking Habits
 
 
 Introduction
 
 **1.1. Aim of the Project**
 
-The Tracking Habit System project aims to create a system capable of tracking a user's habits at home using a Petri net. The system should be able to identify any anomalies in the user's behavior and report them to the user or a monitoring system.
+The Smart Home Tracking Habits project aims to create a system capable of modelling a user's habits at home using a Petri net.
+The habits are collected by the sensors of the smart devices.
+The system should be able to identify any anomalies in the user's behavior and report them to the user or a monitoring system.
 
 **1.2. Technology used**
 
 The project uses the following technologies:
 Python: to implement the system and the anomaly identification algorithm.
-pm4py: to perform the modeling and analysis of the Petri net.
+Pm4py: to perform the modeling and analysis of the Petri net.
 GitHub: to version and share the source code.
 
 **PetriNet**
 
 
 **2.1. Pm4py**
-Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
 
+
+Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
+!! Allungare con varie funzioni usate 
 **2.2. Dataset**
 
 The dataset contains information about a user's habits.
 Each event log represents a sequence of actions performed by the user at home, such as turning on lights, opening doors, or using appliances. The event logs can be used to extract useful insights about the user's behavior, such as their daily routines or patterns of activity.
 
-A routine is described by 12 activities for each day of the week
+The activities avaible in the dataset are 12.
+A routine has been created for each day of a week. 
+
+This is an example of a Monday routine: 
+
 
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/dataset.png)
 
