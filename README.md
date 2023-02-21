@@ -27,7 +27,7 @@ Each event log represents a sequence of actions performed by the user at home, s
 
 A routine is described by 12 activities for each day of the week
 
-![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/petrinet.png)
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/dataset.png)
 
 **2.3. Inductive miner**
 In this project, Inductive Miner is used as the process discovery algorithm to generate a Petri net model from the event log data. One of the main advantages of using Inductive Miner is its ability to handle noisy and incomplete event logs.
