@@ -3,41 +3,70 @@
 
 Introduction
 
-**1.1. Aim of the Project**
+**1.1. Syntesis of the work done**
 
 The Smart Home Tracking Habits project aims to create a system capable of modelling a user's habits at home using a Petri net.
 The habits are collected by the sensors of the smart devices.
-The system should be able to identify any anomalies in the user's behavior and report them to the user or a monitoring system.
+The system should be able to identify any anomalies in the user's behavior and report them to the user or a monitoring system. 
+This will be done by an analysis which compute different parameters.
+In order to do that we followed the steps above:
+1. We created a dataset containing the set of habits of the user
+2. A model (log event) has been generated from the dataset in the point 1
+3. We created a dataset containing the set of wrong habits of the user
+4. The wrong dataset has been used for creating another model in order to create a Petri Net 
+5. The model of the right dataset and the wrong Petri Net have been compared
+6. Rilevamento delle anomalies
+7. Analisi dei parametri ottenuto
+
+The analysis gave us good results because it shows that the system is able to recognize the irregular habits of the user. 
 
 **1.2. Technology used**
 
-The project uses the following technologies:
-Python: to implement the system and the anomaly identification algorithm.
-Pm4py: to perform the modeling and analysis of the Petri net.
-GitHub: to version and share the source code.
+In order to do this project we use the following technologies:
 
-**PetriNet**
+* Python: we used this programming language to implement the system and the anomalies identification algorithm. We thought to use it because of it provides
+  a lot of libraries useful for terminate the project.
+* Pm4py: is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. It provides several tools, we used the following:
+  - pm4py.objects.conversion.log
+  - pm4py.visualization.petri_net import visualizer as pt_visualiser
+  - pm4py.visualization.sna import visualizer as sna_visualiser
+  - pm4py.algo.organizational_mining.sna import algorithm as sna_factory
+  - pm4py.discover_petri_net_inductive
+  - pm4py.conformance_diagnostics_token_based_replay
+  - pm4py.save_vis_petri_net
+  - pm4py.convert_to_event_log
 
-
-**2.1. Pm4py**
-
-
-Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
-!! Allungare con varie funzioni usate 
+* GitHub: to version and to increase the efficiency of the collaboration among the group project's members
+* Colab: to write the code and to obtaining a more clear output
+* Excel: to create the datasets
 
 
 **2.2. Dataset**
 
-The dataset contains information about a user's habits.
-Each event log represents a sequence of actions performed by the user at home, such as turning on lights, opening doors, or using appliances. The event logs can be used to extract useful insights about the user's behavior, such as their daily routines or patterns of activity.
+The dataset is a set of information regarding the considered user's habits.
+Each event log represents a sequence of actions performed by the user at home. The action available in the dataset are the following:
+such as turning on lights, opening doors, or using appliances. 
 
-The activities avaible in the dataset are 12.
 A routine has been created for each day of a week. 
 
 This is an example of a Monday routine: 
 
-
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/dataset.png)
+
+The dataset has been created by using Excel. It is composed of many features:
+* Day (scrivere cosa indica e formato) e dire quali valori può contenere
+Tutte le features si trovano un'unica riga separata da ...
+Le righe in totale sono...
+
+Foto di tutto il dataset giusto
+
+Foto di tutto il dataset sbagliato facendo notare almeno una differenza con quello giusto
+
+Tecnica di importazione del dataset nel progetto.
+
+
+So, in this project the event logs are useful because they allow to extract several insights about the user's behavior that include his daily routines, patterns of activities, duration of the activities and the order through which the activities are executed.
+
 
 **2.3. Inductive miner**
 In this project, Inductive Miner is used as the process discovery algorithm to generate a Petri net model from the event log data. One of the main advantages of using Inductive Miner is its ability to handle noisy and incomplete event logs.
@@ -50,7 +79,10 @@ The Inductive Miner algorithm is able to generate a simple, easy-to-understand p
 
 **3.1. Conformance checking**
 
+Eventuali screen. Librerie usate e argomentarle. Descrivere come funzione (usare la documentazione).
+
 **3.2. Results achieved.**
 
+Screen output e spiegazione dell'output.
 
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/Result.png)
