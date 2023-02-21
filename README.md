@@ -16,6 +16,7 @@ GitHub: to version and share the source code.
 
 **PetriNet**
 
+
 **2.1. Pm4py**
 Pm4py is an open-source Python library that provides a wide range of tools for process mining, a field of computer science focused on the extraction of knowledge from event logs. 
 
@@ -27,8 +28,13 @@ In this project, Inductive Miner is used as the process discovery algorithm to g
 
 The Inductive Miner algorithm is able to generate a simple, easy-to-understand process model that accurately reflects the user's behavior, making it ideal for our project. The resulting Petri net model can be used to analyze the user's habits, detect anomalies in their behavior, and provide personalized feedback and recommendations.
 
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/petrinet.png)
+
 **3. Conclusions**
 
 **3.1. Conformance checking**
 
 **3.2. Results achieved.**
+
+
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/Result.png)
