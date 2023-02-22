@@ -53,17 +53,18 @@ This is an example of a Monday routine:
 
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/dataset.png)
 
-The dataset has been created by using Excel. It is composed of many features:
-* Day (scrivere cosa indica e formato) e dire quali valori può contenere
-Tutte le features si trovano un'unica riga separata da ...
-Le righe in totale sono...
-
-Foto di tutto il dataset giusto
-
-Foto di tutto il dataset sbagliato facendo notare almeno una differenza con quello giusto
-
-Tecnica di importazione del dataset nel progetto.
-
+The activities available are the following:
+ - BathroomDoor_on
+ - BedroomLight_off
+ - BedroomLight_on
+ - Bell off
+ - Computer_off
+ - Computer_on
+ - KitchenLight_off
+ - KitchenLight_on
+ - MainDoor_on
+ - Stove_off
+ - Stove_on
 
 So, in this project the event logs are useful because they allow to extract several insights about the user's behavior that include his daily routines, patterns of activities, duration of the activities and the order through which the activities are executed.
 
@@ -77,7 +78,6 @@ The Inductive Miner algorithm is able to generate a simple, easy-to-understand p
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/petrinet.png)
 
 
-
 **3.1. Conformance checking**
 
 Conformance checking is a process mining technique that compares a process model to an event log to determine how well the model fits the actual behavior captured in the log. One way to perform conformance checking is through token replay.
@@ -88,11 +88,10 @@ Token replay checks whether the sequence of activities in the log matches the se
  Token replay is a useful technique for conformance checking, as it allows analysts to identify discrepancies between a process model and an event log and diagnose the causes of those discrepancies.
 
 
-
 **3.2. Results achieved.**
  Below we present the output obtained, in which the percentage of trace fitness is shown for each day, which indicates that measures how well the model fits the log.
 
-- ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/screen_trace-fitness.png)
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/screen_trace-fitness.png)
 
 Overall, token replay is a useful technique for conformance checking, as it allows analysts to identify discrepancies between a process model and an event log and diagnose the causes of those discrepancies.
 
