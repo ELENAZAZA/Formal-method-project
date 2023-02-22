@@ -98,3 +98,6 @@ Overall, token replay is a useful technique for conformance checking, as it allo
 Non-compliant activities have been diagnosed in our project. Below is a screen of the output obtained after the diagnostics:
 
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/Result.png)
+
+**3.3 Conclusion**
+
