@@ -15,8 +15,8 @@ In order to do that we followed the steps above:
 3. We created a dataset containing the set of wrong habits of the user
 4. The wrong dataset has been used for creating another model in order to create a Petri Net 
 5. The model of the right dataset and the wrong Petri Net have been compared
-6. Rilevamento delle anomalies
-7. Analisi dei parametri ottenuto
+6. Anomalous activity detection
+
 
 The analysis gave us good results because it shows that the system is able to recognize the irregular habits of the user. 
 
@@ -73,16 +73,29 @@ In this project, Inductive Miner is used as the process discovery algorithm to g
 
 The Inductive Miner algorithm is able to generate a simple, easy-to-understand process model that accurately reflects the user's behavior, making it ideal for our project. The resulting Petri net model can be used to analyze the user's habits, detect anomalies in their behavior, and provide personalized feedback and recommendations.
 
+
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/petrinet.png)
 
-**3. Conclusions**
+
 
 **3.1. Conformance checking**
 
-Eventuali screen. Librerie usate e argomentarle. Descrivere come funzione (usare la documentazione).
+Conformance checking is a process mining technique that compares a process model to an event log to determine how well the model fits the actual behavior captured in the log. One way to perform conformance checking is through token replay.
+
+
+Token replay checks whether the sequence of activities in the log matches the sequence of activities in the model. If the log events follow the model exactly, the token will reach the end of the model without any errors. However, if the log events deviate from the model, the token will encounter an error and stop, indicating that the log and model do not conform.
+
+ Token replay is a useful technique for conformance checking, as it allows analysts to identify discrepancies between a process model and an event log and diagnose the causes of those discrepancies.
+
+
 
 **3.2. Results achieved.**
+ Below we present the output obtained, in which the percentage of trace fitness is shown for each day, which indicates that measures how well the model fits the log.
 
-Screen output e spiegazione dell'output.
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/screen_trace_fitness.png)
+
+Overall, token replay is a useful technique for conformance checking, as it allows analysts to identify discrepancies between a process model and an event log and diagnose the causes of those discrepancies.
+
+Non-compliant activities have been diagnosed in our project. Below is a screen of the output obtained after the diagnostics:
 
 ![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/Result.png)
