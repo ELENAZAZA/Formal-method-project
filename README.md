@@ -92,7 +92,7 @@ Token replay checks whether the sequence of activities in the log matches the se
 **3.2. Results achieved.**
  Below we present the output obtained, in which the percentage of trace fitness is shown for each day, which indicates that measures how well the model fits the log.
 
-![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/screen_trace_fitness.png)
+![alt tag](https://github.com/ELENAZAZA/Formal-method-project/blob/main/screen_trace-fitness.png)
 
 Overall, token replay is a useful technique for conformance checking, as it allows analysts to identify discrepancies between a process model and an event log and diagnose the causes of those discrepancies.
 
